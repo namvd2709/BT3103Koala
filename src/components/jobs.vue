@@ -30,16 +30,9 @@
 
 <script>
 import Vue from "vue";
-import Vuex from "vuex";
-import Vuexfire from "vuexfire";
-import Chartkick from "chartkick";
 import VueChartkick from "vue-chartkick";
-import firebase from "firebase";
-import VueChartjs from "vue-chartjs";
 import Chart from "chart.js";
 import { db } from "../config";
-import bg from "../assets/NUS_Background_3.png";
-import router from "../router";
 
 Vue.use(VueChartkick, { adapter: Chart });
 
@@ -65,11 +58,10 @@ export default {
   },
   methods: {
     GetByMajor: function(roles, major, industry) {
-      console.log("GETTING");
       if (roles[major] === undefined) {
-        console.log(roles);
+        return;
       } else if (roles[major][industry] === undefined) {
-        console.log(roles[major]);
+        return;
       } else {
         return roles[major][industry];
       }
@@ -82,9 +74,9 @@ export default {
     },
     GetJobList: function(roles, major, industry) {
       if (roles[major] === undefined) {
-        console.log("WAITING");
+        return;
       } else if (roles[major][industry] === undefined) {
-        console.log("WAITING");
+        return;
       } else {
         let result = Object.keys(roles[major][industry]);
         return result;

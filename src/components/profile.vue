@@ -39,17 +39,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import Vuex from "vuex";
-import Vuexfire from "vuexfire";
-import Chartkick from "chartkick";
-import VueChartkick from "vue-chartkick";
-import firebase from "firebase";
-import VueChartjs from "vue-chartjs";
-import Chart from "chart.js";
+
+
 import { db } from "../config";
-import router from "../router";
-import bg from "../assets/NUS_Background_2.png";
 
 export default {
   name: "profile",
@@ -80,14 +72,12 @@ export default {
     },
     GetIndustryByMajor: function(industry_fb, major) {
       if (industry_fb[major] === undefined) {
-        console.log("Error");
       } else {
         return industry_fb[major];
       }
     },
     GetMajorList: function(major_fb, major) {
       if (major_fb[major] === undefined) {
-        console.log("WAITING");
       } else {
         let result = Object.keys(major_fb[major]);
         return result;
@@ -95,7 +85,6 @@ export default {
     },
     GetIndustryList: function(industry_fb, major) {
       if (industry_fb[major] === undefined) {
-        console.log("WAITING");
       } else {
         let result = Object.keys(industry_fb[major]);
         return result;

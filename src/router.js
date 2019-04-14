@@ -4,7 +4,6 @@ import Router from "vue-router";
 
 import profile from "./components/profile.vue";
 import jobs from "./components/jobs.vue";
-import login from "./components/login.vue";
 import IndvJobs from "./components/IndvJobs.vue";
 
 Vue.use(VueFire);
@@ -12,7 +11,6 @@ Vue.use(Router);
 
 export const routes = [
   { path: "/profile", component: profile, name: profile },
-  { path: "/login", component: login, name: login },
   { path: "/jobs", component: jobs, name: jobs },
   { path: "/jobs/:id", component: jobs, name: "jobs" },
   { path: "/jobs/:id2", component: jobs, name: "jobs" },
