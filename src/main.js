@@ -5,15 +5,8 @@ import Vue from "vue";
 
 //import firebase
 import VueFire from "vuefire";
-import firebase from "firebase/app";
 
 Vue.use(VueFire);
-// if (!firebase.apps.length) {
-//   firebase.initializeApp({
-//     projectId: "bt3103",
-//     databaseURL: "https://bt3103-3c2fe.firebaseio.com"
-//   });
-// }
 
 //import the App component
 import App from "./App";
