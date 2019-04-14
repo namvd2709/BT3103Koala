@@ -51,7 +51,6 @@
 
 
 import { db } from "../config";
-import ba from "../assets/Business_Analyst.png";
 
 export default {
   name: "app",
@@ -104,48 +103,56 @@ export default {
   methods: {
     GetSalaryByJob: function(salary, major, industry, job) {
       if (salary[major] === undefined) {
+        return;
       } else {
         return salary[major][industry][job];
       }
     },
     GetCompaniesByJob: function(companies, major, industry, job) {
       if (companies[major] === undefined) {
+        return;
       } else {
         return companies[major][industry][job];
       }
     },
     GetofferDate10ByJob: function(offerDate10, major, industry, job) {
       if (offerDate10[major] === undefined) {
+        return;
       } else {
         return offerDate10[major][industry][job];
       }
     },
     GetofferDate50ByJob: function(offerDate50, major, industry, job) {
       if (offerDate50[major] === undefined) {
+        return;
       } else {
         return offerDate50[major][industry][job];
       }
     },
     GetofferDate90ByJob: function(offerDate90, major, industry, job) {
       if (offerDate90[major] === undefined) {
+        return;
       } else {
         return offerDate90[major][industry][job];
       }
     },
     GetNumInterview: function(numInterviews, major, industry, job) {
       if (numInterviews[major] === undefined) {
+        return;
       } else {
         return numInterviews[major][industry][job];
       }
     },
     GetCompetitionForJob: function(competitors, industry, job) {
       if (competitors[industry] === undefined) {
+        return;
       } else {
         return competitors[industry][job];
       }
     },
     GetJobDescription: function(jobDescription, job) {
       if (jobDescription[job] === undefined) {
+        return;
       } else {
         return jobDescription[job];
       }

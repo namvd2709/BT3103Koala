@@ -72,12 +72,14 @@ export default {
     },
     GetIndustryByMajor: function(industry_fb, major) {
       if (industry_fb[major] === undefined) {
+        return;
       } else {
         return industry_fb[major];
       }
     },
     GetMajorList: function(major_fb, major) {
       if (major_fb[major] === undefined) {
+        return;
       } else {
         let result = Object.keys(major_fb[major]);
         return result;
@@ -85,6 +87,7 @@ export default {
     },
     GetIndustryList: function(industry_fb, major) {
       if (industry_fb[major] === undefined) {
+        return;
       } else {
         let result = Object.keys(industry_fb[major]);
         return result;
