@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  computed: {
+    currentRoute () {
+      return this.$route.name
+    }
+  }
 };
 </script>
 <!-- styling for the component -->
